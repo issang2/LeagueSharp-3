@@ -21,8 +21,7 @@
      
     using namespace std;
     const char* BugsplatEXE = "BsSndRpt.exe";
-	const char* RitoBotEXE = "RitoBot.exe";
-	const char* BoLEXE = "BoL Studio.exe";
+	const char* RitoBotEXE = "VoliBot.exe";
     bool pressedf5 = false;
     bool isAlive(const char* pN);
     void emulatef5();
@@ -36,16 +35,12 @@
 					Sleep(1000);
 					if (!isAlive(RitoBotEXE))
 					{
-						system("start RitoBot.exe");
+						system("start VoliBot.exe");
 					}
                     if (isAlive(BugsplatEXE))
                     {
                             system("taskkill /F /T /IM BsSndRpt.exe");
-							system("taskkill /F /T /IM RitoBot.exe");
-							if (isAlive(BoLEXE))
-							{
-							system("taskkill /F /T /IM BoL Studio.exe");
-							}
+							system("taskkill /F /T /IM VoliBot.exe");
                     }
      
             }
